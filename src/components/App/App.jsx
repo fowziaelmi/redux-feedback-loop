@@ -19,6 +19,8 @@ function App() {
             <Understanding />
           </Route>
           <Route path="/Feeling">
+            {' '}
+            How are you feeling?
             <Feeling />
           </Route>
           <Route path="/Support">

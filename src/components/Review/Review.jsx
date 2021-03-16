@@ -4,6 +4,8 @@ import axios from 'axios';
 // Gotta get the feedback info from store
 function Review (){
     const review = useSelector((store) => store.feedbackReducer);
+    const history = useHistory();
+
 
     //make axios call to post to server
 const handleSubmit = () => {
@@ -11,9 +13,11 @@ const handleSubmit = () => {
           .then((result) => {
            console.log('feedback is:', review)
           })
+          
           .catch((err) => {
             console.log('Error in POST client', err);
           });
+          history.push('/Submission');
       };
     return(
         <div>

@@ -7,6 +7,7 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Feeling from '../Feeling/Feeling';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Review from '../Review/Review'
+import Submission from '../Submission/Submission'
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/Review">
             <Review />
+          </Route>
+          <Route path="/Submission">
+            <Submission />
           </Route>
         </Router>
       </header>

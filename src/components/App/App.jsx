@@ -5,6 +5,7 @@ import Comments from '../Comments/Comments.jsx';
 import Support from '../Support/Support.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Feeling from '../Feeling/Feeling';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <div className="App">

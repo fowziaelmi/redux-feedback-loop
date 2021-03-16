@@ -13,7 +13,7 @@ const Feedback = {
   feeling: '',
   comments: '',
   supported: '',
-  ''
+  
 };
 
 // Reducer to handle all Feedback inputs

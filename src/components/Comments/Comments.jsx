@@ -1,6 +1,6 @@
 function Comments() {
-  return <h2>Comments here</h2>;
-}const dispatch = useDispatch();
+
+const dispatch = useDispatch();
 const history = useHistory();
 
 const [newComments, UnderstandNum] = useState('');

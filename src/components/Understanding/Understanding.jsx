@@ -1,6 +1,8 @@
-function Understanding() {
-  return <h2>Comments here</h2>;
-}
+
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 function Understanding() {
   const dispatch = useDispatch();
   const history = useHistory();

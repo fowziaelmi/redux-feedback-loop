@@ -20,7 +20,7 @@ function App() {
           <Route path="/Understanding">
             <Understanding />
           </Route>
-          <Route path="/Feeling">
+          <Route path="/" exact>
             {' '}
             How are you feeling?
             <Feeling />

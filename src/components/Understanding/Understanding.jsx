@@ -20,7 +20,7 @@ function Understanding() {
       },
     });
 
-    history.push('/supported');
+    history.push('/support');
   };
 
   return (

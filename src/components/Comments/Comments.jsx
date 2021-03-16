@@ -19,7 +19,7 @@ const handleSubmit = (evt) => {
       value: comments,
     },
   });
-
+  history.push('/Review');
   
 };
 

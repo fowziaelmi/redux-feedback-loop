@@ -18,7 +18,7 @@ function Feeling() {
     dispatch({
       type: 'UPDATE_FEEDBACK',
       payload: {
-        property: 'feelings',
+        property: 'feeling',
         value: feelings,
       },
     });

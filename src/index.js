@@ -23,7 +23,7 @@ const feedback = {
 const feedbackReducer = (state = feedback, action) => {
   switch (action.type) {
     case 'UPDATE_FEEDBACK':
-      return { ...state, [action.payload]: action.payload.value };
+      return { ...state, [action.payload.property]: action.payload.value };
     case 'FEEDBACK_ClEAR':
       return feedback;
     default:

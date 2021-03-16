@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function Feeling() {
@@ -7,13 +7,25 @@ function Feeling() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [feelings, setFeelings] = useState('');
+  const [feelings, setFeelings] = useState(
+    useSelector((store) => store.feedbackReducer.feeling)
+  );
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log('in submit');
+    console.log('in feelings submit');
     console.log(feelings);
+    dispatch({
+      type: 'UPDATE_FEEDBACK',
+      payload: {
+        property: 'feelings',
+        value: feelings,
+      },
+    });
+
+    history.push('/understanding');
   };
+  
 
   return (
     <div>

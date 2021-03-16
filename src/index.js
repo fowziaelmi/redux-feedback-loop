@@ -4,11 +4,14 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+
 import { Provider } from 'react-redux';
+
+
 import logger from 'redux-logger';
 
 // Default object for feedbackReducer
-const Feedback = {
+const feedback = {
   understanding: '',
   feeling: '',
   comments: '',
@@ -17,12 +20,12 @@ const Feedback = {
 };
 
 // Reducer to handle all Feedback inputs
-const feedback = (state = Feedback, action) => {
+const feedbackReducer = (state = feedback, action) => {
   switch (action.type) {
     case 'UPDATE_FEEDBACK':
-      return { ...state, [action.payload]: action.payload };
+      return { ...state, [action.payload]: action.payload.value };
     case 'FEEDBACK_ClEAR':
-      return Feedback;
+      return feedback;
     default:
       return state;
   }
@@ -30,11 +33,16 @@ const feedback = (state = Feedback, action) => {
 
 const storeInstance = createStore(
   combineReducers({
-    feedback,
+    feedbackReducer,
   }),
   applyMiddleware(logger)
 );
 
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={storeInstance}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
 registerServiceWorker();
+

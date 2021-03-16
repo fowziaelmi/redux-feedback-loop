@@ -34,7 +34,7 @@ function Understanding() {
             min="1"
             max="5"
             name="understanding"
-            value={understandNum}
+            value={understand}
             onChange={(evt) => setUnderstand(evt.target.value)}
             required
           ></input>

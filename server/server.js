@@ -10,7 +10,8 @@ app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
 
-
+const feedbackRouter = require('./router/router');
+app.use('/api/feedback', feedbackRouter);
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);

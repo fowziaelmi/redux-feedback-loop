@@ -17,11 +17,16 @@ const handleSubmit = () => {
       };
     return(
         <div>
-<h1>
-    Here is your feedback
+<h3>
+    Here is your feedback, if everything is correct press submit!
     
-</h1> <div>
-<p>{review.feeling} </p> <button name="submit" onClick={handleSubmit}>
+</h3> <div>
+<p>Your feeling rating is: {review.feeling} </p> 
+<p>Your understanding rating is: {review.understanding} </p> 
+<p>Your feeling supported rating is: {review.supported} </p> 
+<p>Here are your comments: {review.comments} </p> 
+
+<button name="submit" onClick={handleSubmit}>
         Submit
       </button></div> </div>
     );

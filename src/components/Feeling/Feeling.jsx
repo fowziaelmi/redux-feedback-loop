@@ -40,6 +40,7 @@ function Feeling() {
             name="feeling"
             value={feelings}
             onChange={(evt) => setFeelings(evt.target.value)}
+            required
           ></input>
           <button>Next</button>
         </label>

@@ -37,7 +37,7 @@ const history = useHistory();
             name="supported"
             value={support}
             onChange={(evt) => setSupport(evt.target.value)}
-            
+            required
           ></input>
           <button name="Next">Next</button>
         </label>

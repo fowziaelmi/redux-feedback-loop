@@ -6,6 +6,7 @@ import Support from '../Support/Support.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Feeling from '../Feeling/Feeling';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import Review from '../Review/Review'
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,9 @@ function App() {
           <Route path="/Support">
            
             <Support />
+          </Route>
+          <Route path="/Review">
+            <Review />
           </Route>
         </Router>
       </header>
